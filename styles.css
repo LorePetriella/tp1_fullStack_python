@@ -1,0 +1,27 @@
+*,
+*::before, 
+*::after{
+
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.full-height {
+    min-height: 100vh; /* 100% de la altura del viewport */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer al final del contenido */
+    width: 100%;
+    background-color: #f8f9fa;
+}
