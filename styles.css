@@ -45,4 +45,27 @@ footer {
     border-radius: 20px; /* Aplicar bordes redondeados a las imágenes también */
 }
 
+.footer-icons {
+    font-size: 35px;
+}
 
+.close-circle {
+    position: absolute; /* Permitir posicionamiento */
+    top: 10px; /* Ajustar la posición vertical */
+    right: 10px; /* Ajustar la posición horizontal */
+    border-radius: 50%; /* Convertir en círculo */
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejor contraste */
+    width: 30px; /* Ancho del círculo */
+    height: 30px; /* Alto del círculo */
+    display: flex; /* Para centrar el contenido */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    z-index: 10; /* Asegurarse de que esté por encima del contenido */
+    --bs-btn-close-bg-color: transparent; /* Fondo transparente para el botón */
+    --bs-btn-close-color: white; /* Color de la cruz */
+    --bs-btn-close-width: 2px; /* Grosor de la línea de la cruz */
+    border: 1px solid white; /* Borde blanco para resaltar */
+  }
+  
+
+  
