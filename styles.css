@@ -6,25 +6,46 @@
 }
 
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    height: 100%; 
     display: flex;
     flex-direction: column;
+   
 }
-
+.container-carousel {
+    
+    display: flex; /* Usar flexbox para centrar */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    padding: 100px 20px; 
+    margin-top: 50px;
+}
 .full-height {
     min-height: 100vh; /* 100% de la altura del viewport */
     display: flex;
     align-items: center; /* Centra el contenido verticalmente */
     justify-content: center; /* Centra el contenido horizontalmente */
-}
 
+}
+.carousel {
+    width: 100%; /* O cualquier ancho que desees */
+    height: 65vh; /* Ajusta la altura del carrusel */
+    overflow: hidden; /* Para evitar que las imágenes se desborden */
+    border-radius: 20px; /* Bordes redondeados */
+}
 footer {
     margin-top: auto; /* Empuja el footer al final del contenido */
     width: 100%;
     background-color: #f8f9fa;
 }
+
+/* Asegura que las imágenes se adapten a la altura del carrusel */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover; /* Para que las imágenes se adapten a la altura */
+    border-radius: 20px; /* Aplicar bordes redondeados a las imágenes también */
+}
+
+
 .agenda{
     width: 100%;
     max-width: 1200px;
