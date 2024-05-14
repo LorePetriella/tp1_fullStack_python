@@ -132,7 +132,7 @@
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+            
           </button>
           <button
             class="carousel-control-next"
@@ -141,7 +141,7 @@
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+         
           </button>
         </div>
       </div>
@@ -191,19 +191,23 @@
     </section>
 
    
-
+<section id="youtube-model">
     <!-- Modal para mostrar el reproductor de YouTube -->
 <div class="modal fade" id="youtubeModal" tabindex="-1" aria-hidden="true">
+ 
     <div class="modal-dialog modal-dialog-centered modal-lg"> 
    
-        <button type="button" class="btn-close close-circle" data-bs-dismiss="modal" aria-label="Cerrar">X</button> <!-- Botón para cerrar -->
+      <button type="button" class="btn-close close-circle" data-bs-dismiss="modal" aria-label="Cerrar"></button> 
+        <div class="modal-content">
+          
         <div class="modal-body text-center"> 
-          <div id="youtube-video"></div> <!-- Reproductor de YouTube -->
+          <div id="youtube-video" ></div> <!-- Reproductor de YouTube -->
         </div>
        
       </div>
-
+    </div>
   </div>
+</section>
   
 
 
@@ -232,6 +236,10 @@
               <i class="bi bi-instagram footer-icons"></i>
             </a>
             <button class="btn btn-dark" type="button">Audiciones</button>
+            <!-- Vertically centered scrollable modal -->
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable visually-hidden">
+
+</div>
           </div>
         </div>
       </div>

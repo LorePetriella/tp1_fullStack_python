@@ -32,11 +32,6 @@ html, body {
     overflow: hidden; /* Para evitar que las imágenes se desborden */
     border-radius: 20px; /* Bordes redondeados */
 }
-footer {
-    margin-top: auto; /* Empuja el footer al final del contenido */
-    width: 100%;
-    background-color: #f8f9fa;
-}
 
 /* Asegura que las imágenes se adapten a la altura del carrusel */
 .carousel-inner img {
@@ -44,6 +39,16 @@ footer {
     object-fit: cover; /* Para que las imágenes se adapten a la altura */
     border-radius: 20px; /* Aplicar bordes redondeados a las imágenes también */
 }
+
+
+
+footer {
+    margin-top: auto; /* Empuja el footer al final del contenido */
+    width: 100%;
+    background-color: #f8f9fa;
+}
+
+
 
 .footer-icons {
     font-size: 35px;
@@ -53,21 +58,23 @@ footer {
     position: absolute; /* Permitir posicionamiento */
     top: 10px; /* Ajustar la posición vertical */
     right: 10px; /* Ajustar la posición horizontal */
-    border-radius: 50%; /* Convertir en círculo */
-    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro para mejor contraste */
+    border-radius: 50%; /* Convertir en círculo */    
     width: 30px; /* Ancho del círculo */
     height: 30px; /* Alto del círculo */
     display: flex; /* Para centrar el contenido */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    z-index: 10; /* Asegurarse de que esté por encima del contenido */
-    --bs-btn-close-bg-color: transparent; /* Fondo transparente para el botón */
-    --bs-btn-close-color: white; /* Color de la cruz */
-    --bs-btn-close-width: 2px; /* Grosor de la línea de la cruz */
-    border: 1px solid white; /* Borde blanco para resaltar */
+    z-index: 10; 
+    /* --bs-btn-close-bg-color: transparent;  */
+    --bs-btn-close-color: black; /* Color de la cruz */
+    /* --bs-btn-close-width: 50px; */
+    border: 2px solid black 
   }
   
 
+
+
+  
 .agenda{
     width: 100%;
     max-width: 1200px;

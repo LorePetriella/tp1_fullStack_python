@@ -12,7 +12,7 @@ const showSection = (sectionToShow) => {
 $("official_video").addEventListener("click", (event) => {
     event.preventDefault();
     showSection("youtube"); 
-    // toggleFullScreen($("youtube-video")); // Entrar en modo de pantalla completa
+    
     const modal = new bootstrap.Modal($("youtubeModal"));
   modal.show(); // Mostrar el modal
   });
@@ -28,31 +28,31 @@ const videoIds = ['1uMA2cqq6Ig', '3kFKSXvtSEk'];
 let currentVideoIndex = 0;
 
 
-// function onYouTubeIframeAPIReady() {
-//     player = new YT.Player('youtube-video', {
-//       height: '390',
-//       width: '640',
-//       videoId: videoIds[currentVideoIndex],
-//       events: {
-//         onReady: onPlayerReady,
-//         onStateChange: onPlayerStateChange,
-//       },
-//     });
-//   }
-  
+
  $('youtubeModal').addEventListener('shown.bs.modal', () => {
+ 
     if (!player) {
       player = new YT.Player('youtube-video', {
         height: '390', // Tamaño del reproductor
         width: '640',
         videoId: videoIds[currentVideoIndex], // ID del video que deseas reproducir
+        playerVars: {
+          'playsinline': 1 // Reproducción en línea para dispositivos móviles
+      },
         events: {
-          onReady: (event) => event.target.playVideo(), // Autoplay
-          onStateChange: onPlayerStateChange, // Manejo de eventos
+          onReady: (event) => {
+            event.target.playVideo();
+            $('youtube-video').classList.add('ratio'); // Agrega la clase para hacer el iframe responsive
+           
         },
-      });
-    }
-  });
+        },
+      
+          onStateChange: onPlayerStateChange // Manejo de eventos
+        }
+      )};
+  
+});
+
   
   $('youtubeModal').addEventListener('hidden.bs.modal', () => {
     if (player) {
@@ -63,13 +63,7 @@ let currentVideoIndex = 0;
 
 
 
-
-
-const onPlayerReady = (event) => {
-  event.target.playVideo(); // Autoplay. 
-};
-
-
+  
 const onPlayerStateChange = (event) => {
     if (event.data === YT.PlayerState.ENDED) {
        
@@ -80,18 +74,7 @@ const onPlayerStateChange = (event) => {
         }    }
     };
    
-    // const toggleFullScreen = (element) => {
-    //     if (!document.fullscreenElement) {
-    //       if (element.requestFullscreen) {
-    //         element.requestFullscreen();
-    //       } else if (element.webkitRequestFullscreen) {
-    //         element.webkitRequestFullscreen(); // Safari
-    //       } else if (element.msRequestFullscreen) {
-    //         element.msRequestFullscreen(); // Edge/IE
-    //       }
-    //     }
-    //   };
+   
       
-    
-      
+
 
