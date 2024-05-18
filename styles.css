@@ -11,6 +11,8 @@ html, body {
     flex-direction: column;
    
 }
+
+
 .container-carousel {
     
     display: flex; /* Usar flexbox para centrar */
@@ -20,12 +22,17 @@ html, body {
     margin-top: 50px;
 }
 .full-height {
-    min-height: 100vh; /* 100% de la altura del viewport */
+    min-height: 100vh; 
     display: flex;
-    align-items: center; /* Centra el contenido verticalmente */
-    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; 
+    justify-content: center; 
+
 
 }
+
+
+
+
 .carousel {
     width: 100%; /* O cualquier ancho que desees */
     height: 65vh; /* Ajusta la altura del carrusel */
@@ -56,8 +63,8 @@ footer {
 
 .close-circle {
     position: absolute; /* Permitir posicionamiento */
-    top: 10px; /* Ajustar la posición vertical */
-    right: 10px; /* Ajustar la posición horizontal */
+    top: 5px; /* Ajustar la posición vertical */
+    right: -40px; /* Ajustar la posición horizontal */
     border-radius: 50%; /* Convertir en círculo */    
     width: 30px; /* Ancho del círculo */
     height: 30px; /* Alto del círculo */
@@ -79,7 +86,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     height: 100%;
-    height: 430px;
+    /* height: 430px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -90,7 +97,7 @@ footer {
 
 .agenda .container {
     text-align: center;
-    margin: 60px;
+    /* margin: 60px; */
   }
 
 .agenda .caja{
@@ -131,7 +138,7 @@ footer {
     width: 100%;
     max-width: 1200px;
     height: 100%;
-    height: 430px;
+    /* height: 430px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -140,7 +147,7 @@ footer {
 }
 .videos .container {
     text-align: center;
-    margin: 60px;
+    /* margin: 60px; */
 }
 .videos .caja{
     background-color: white;
@@ -164,3 +171,6 @@ footer {
     font-size: 16px;
     font-weight: 300;
 }
+
+
+

@@ -50,12 +50,17 @@
                 <a class="nav-link" href="#videos">Videos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contacto</a>
+                <a class="nav-link" href="#contact" onclick="showModal('contactModal')">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#auditions" onclick="showModal('auditionModal')">Audiciones</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+    </header>
+      <section>
       <div class="container-carousel">
         <div id="carouselExampleIndicators" class="carousel slide">
           <div class="carousel-indicators">
@@ -145,10 +150,12 @@
           </button>
         </div>
       </div>
-    </header>
+      
+    </section>
+    
 
     <!-- Sección Agenda de presentaciones -->
-    <section id="agenda" class="full-height">
+    <section id="agenda" class="full-height" style="background-color: cadetblue;">
          
         <div class="agenda">
             <h2 class="container">Agenda de Presentaciones</h2>  
@@ -179,7 +186,7 @@
     </section>
 
     <!-- Sección de Videos -->
-    <section id="videos" class="full-height">
+    <!-- <section id="videos" class="full-height" style="background-color: coral;">
         <div class="videos">
                 <h2 class="container">Videos</h2> 
                 <div class="caja">
@@ -213,7 +220,58 @@
                     <p>Queen</p>
                 </div>
             </div>
-        </section>
+        </section> -->
+        <section id="videos" class="full-height" style="background-color: coral;">
+          <div class="container videos">
+              <!-- <h2 class="text-center mb-4">Videos</h2> -->
+              <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/CTJ9izazmcI" title="Basket Case por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Basket Case</h3>
+                          <p>Green Day</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/dMj01L3lTLE" title="Somebody To Love por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Somebody to love</h3>
+                          <p>Queen</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/sCt8PWnE5aA" title="Uptown Funk por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Uptown funk</h3>
+                          <p>Mark Ronson</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/JQb7Ov2_R-8" title="Fat Bottomed Girls por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Fat bottomed girls</h3>
+                          <p>Queen</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/Nb4duVTIJ_Q" title="Beat it por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Beat it</h3>
+                          <p>Michael Jackson</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                      <div class="caja">
+                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/FCCBlRzMgFg" title="Don´t Stop Me Now por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <h3>Don't stop me now</h3>
+                          <p>Queen</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      
     
     
     <!-- Sección Contacto -->
@@ -224,25 +282,6 @@
     </section>
 
    
-<section id="youtube-model">
-    <!-- Modal para mostrar el reproductor de YouTube -->
-<div class="modal fade" id="youtubeModal" tabindex="-1" aria-hidden="true">
- 
-    <div class="modal-dialog modal-dialog-centered modal-lg"> 
-   
-      <button type="button" class="btn-close close-circle" data-bs-dismiss="modal" aria-label="Cerrar"></button> 
-        <div class="modal-content">
-          
-        <div class="modal-body text-center"> 
-          <div id="youtube-video" ></div> <!-- Reproductor de YouTube -->
-        </div>
-       
-      </div>
-    </div>
-  </div>
-</section>
-  
-
 
 
     <footer class="bg-dark text-white text-center">
@@ -255,11 +294,12 @@
               href="#"
               rel="noopener noreferrer"
             >
-              <i class="bi bi-envelope-at-fill footer-icons"></i>
+              <i id="contact" class= "bi bi-envelope-at-fill footer-icons" onclick="showModal('contactModal')"></i>
             </a>
             <a class="navbar-brand" href="#" rel="noopener noreferrer">
               <i id="official_video" class="bi bi-youtube footer-icons "></i>
             </a>
+
             <a
               class="navbar-brand"
               href="https://www.instagram.com/cororockoficial/"
@@ -268,15 +308,31 @@
             >
               <i class="bi bi-instagram footer-icons"></i>
             </a>
-            <button class="btn btn-dark" type="button">Audiciones</button>
+            <button id="auditions-btn" class="btn btn-dark" type="button" onclick="showModal('auditionModal')">Audiciones</button>
             <!-- Vertically centered scrollable modal -->
-<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable visually-hidden">
 
-</div>
           </div>
         </div>
       </div>
     </footer>
+
+  
+      <!-- Modal para mostrar el reproductor de YouTube -->
+  <div class="modal fade" id="youtubeModal" tabindex="-1" aria-hidden="true">
+   
+      <div class="modal-dialog modal-dialog-centered modal-lg"> 
+     
+        <button type="button" class="btn-close close-circle" data-bs-dismiss="modal" aria-label="Cerrar"></button> 
+          <div class="modal-content">
+            
+          <div class="modal-body text-center"> 
+            <div id="youtube-video" ></div> <!-- Reproductor de YouTube -->
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  <!-- </section> -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
