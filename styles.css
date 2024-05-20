@@ -1,61 +1,57 @@
-*,
-*::before, 
-*::after{
 
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%; 
+    
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-   
+    min-height: 100vh;
 }
+
 
 
 .container-carousel {
-    
-    display: flex; /* Usar flexbox para centrar */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    padding: 100px 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
     margin-top: 50px;
 }
+
 .full-height {
-    min-height: 100vh; 
+    flex-grow: 1;  /* Hace que las secciones ocupen el espacio disponible */
+   
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-
-
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  
 }
-
-
-
 
 .carousel {
-    width: 100%; /* O cualquier ancho que desees */
-    height: 65vh; /* Ajusta la altura del carrusel */
-    overflow: hidden; /* Para evitar que las imágenes se desborden */
-    border-radius: 20px; /* Bordes redondeados */
+    width: 100%;
+    height: 65vh;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-/* Asegura que las imágenes se adapten a la altura del carrusel */
 .carousel-inner img {
     height: 500px;
     object-fit: cover; /* Para que las imágenes se adapten a la altura */
     border-radius: 20px; /* Aplicar bordes redondeados a las imágenes también */
 }
 
-
-
 footer {
     margin-top: auto; /* Empuja el footer al final del contenido */
     width: 100%;
     background-color: #f8f9fa;
 }
-
-
 
 .footer-icons {
     font-size: 35px;
@@ -65,112 +61,90 @@ footer {
     position: absolute; /* Permitir posicionamiento */
     top: 5px; /* Ajustar la posición vertical */
     right: -40px; /* Ajustar la posición horizontal */
-    border-radius: 50%; /* Convertir en círculo */    
+    border-radius: 50%; /* Convertir en círculo */
     width: 30px; /* Ancho del círculo */
     height: 30px; /* Alto del círculo */
     display: flex; /* Para centrar el contenido */
     align-items: center; /* Centrar verticalmente */
     justify-content: center; /* Centrar horizontalmente */
-    z-index: 10; 
-    /* --bs-btn-close-bg-color: transparent;  */
+    z-index: 10;
     --bs-btn-close-color: black; /* Color de la cruz */
-    /* --bs-btn-close-width: 50px; */
-    border: 2px solid black 
-  }
-  
+    border: 2px solid black;
+}
 
-
-
-  
-.agenda{
+.agenda, .videos {
     width: 100%;
     max-width: 1200px;
     height: 100%;
-    /* height: 430px; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
-    padding: auto;
-
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.agenda .container {
+.agenda .container, .videos .container {
     text-align: center;
-    /* margin: 60px; */
-  }
+}
 
-.agenda .caja{
+.agenda .caja, .videos .caja {
     background-color: white;
-    width: 330px;
-    height: 400px;
+    width: calc(100% - 40px); /* Para dispositivos móviles */   
+    height: 400px; /* Ajustar la altura según sea necesario */
+    margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    margin: 20px;
     text-align: center;
     transition: all 0.25s;
 }
+.agenda .caja {
+    max-width: 330px;
+}
 
-  
-.agenda .caja:hover{
+.videos .caja {
+    height: 275px; /* Ajustar la altura para la sección de videos */
+}
+
+.agenda .caja:hover, .videos .caja:hover {
     background-color: lightgrey;
     transform: translateY(-10px);
     box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 }
 
-.agenda .caja img{
+.agenda .caja img, .videos .caja iframe {
     width: 100%;
-    height: 70%;
+    height: auto;
 }
-.agenda .caja h3{
+
+.agenda .caja h3, .videos .caja h3 {
     font-weight: 600;
 }
-.agenda .caja p{
+
+.agenda .caja p, .videos .caja p {
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
 }
 
-/* Videos */
 
-.videos{
-    width: 100%;
-    max-width: 1200px;
-    height: 100%;
-    /* height: 430px; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-    padding: auto;
-}
-.videos .container {
-    text-align: center;
-    /* margin: 60px; */
-}
-.videos .caja{
-    background-color: white;
-    width: 330px;
-     height: 275px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-}
-.videos .caja:hover{
-    background-color: lightgrey;
-    transform: translateY(-10px);
-    box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
+/* @media (min-width: 576px) {
+    .agenda .caja, .videos .caja {
+        width: calc(50% - 40px); 
+    }
 }
 
-.videos .caja p{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
+@media (min-width: 768px) {
+    .agenda .caja, .videos .caja {
+        width: calc(33.333% - 40px); 
+    }
 }
 
+@media (min-width: 992px) {
+    .agenda .caja, .videos .caja {
+        width: calc(25% - 40px); 
+    }
+} */
 
 
