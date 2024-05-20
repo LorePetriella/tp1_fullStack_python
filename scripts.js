@@ -1,17 +1,11 @@
 const $ = (id) => document.getElementById(id);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-// const showSection = (sectionToShow) => {
-//     $$('.section').forEach((section) => {
-//         section.classList.add("visually-hidden");
-//         $(`${sectionToShow}`).classList.remove("visually-hidden");
-//     });
-// };
+
 
 //Modal para videos de youTube que se muestra con el ícono del footer
 $("official_video").addEventListener("click", (event) => {
-  event.preventDefault();
-  // showSection("youtube");
+  event.preventDefault(); 
 
   const modal = new bootstrap.Modal($("youtubeModal"));
   modal.show(); // Mostrar el modal
@@ -31,7 +25,7 @@ $("youtubeModal").addEventListener("shown.bs.modal", () => {
     player = new YT.Player("youtube-video", {
       height: "390", // Tamaño del reproductor
       width: "640",
-      videoId: videoIds[currentVideoIndex], // ID del video que deseas reproducir
+      videoId: videoIds[currentVideoIndex], // ID del video a reproducir
       playerVars: {
         playsinline: 1, // Reproducción en línea para dispositivos móviles
       },
