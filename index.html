@@ -1,299 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header>
-      <!-- Barra de navegación usando Bootstrap -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./assets/logo.jpg" alt="Logo" style="height: 80px" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#agenda"
-                  >Agenda</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about-us">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#videos">Videos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact" onclick="showModal('contactModal')">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#auditions" onclick="showModal('auditionModal')">Audiciones</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section id="photo_section">
-      <div class="container-carousel">
-        <div id="carouselExampleIndicators" class="carousel slide">
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="./assets/camarines.jpg"
-                class="d-block w-100 active"
-                alt="camarines"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/setlist.jpg"
-                class="d-block w-100"
-                alt="setlist"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/espaldas.jpg"
-                class="d-block w-100"
-                alt="show"
-              />
-            </div>
-            <div class="carousel-item">
-              <img
-                src="./assets/escenario.jpg"
-                class="d-block w-100"
-                alt="escenario"
-              />
-            </div>
-            <div class="carousel-item">
-              <img src="./assets/solo.jpg" class="d-block w-100" alt="solo" />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-         
-          </button>
-        </div>
-      </div>
-      
-    </section>
-    
-
-    <!-- Sección Agenda de presentaciones -->
-    <section id="agenda" class="full-height">
-         
-        <div class="agenda">
-            <h2 class="container">Agenda de Presentaciones</h2>  
-            <div class="caja">
-                <img class="imagen" src="assets/agenda1.jpg" alt="Foto1">
-                <h3>Museo Nacional de Arte Decorativo</h3>
-                <p>Domingo 11/16 a las 17hs</p>
-            </div>
-            <div class="caja">
-                <img class="imagen" src="assets/agenda2.jpg" alt="Foto2">
-                <h3>Coral Porteño y St. Luke's</h3>
-                <p>Domingo 2/7 a las 17:30hs</p>
-            </div>
-            <div class="caja">
-                <img class="imagen" src="assets/agenda3.jpg" alt="Foto3">
-                <h3>Auditorio San Rafael</h3>
-                <p>Sabado 9/12 a las 20:30hs</p>
-            </div>
-
-         </div> 
-        </section>
-   
-    </section>
-
-    <!-- Sección Nosotros -->
-    <section id="about-us" class="full-height">
-      <h2>Sobre Nosotros</h2>
-    </section>
-
-    <!-- Sección de Videos -->
-  
-        <section id="videos" class="full-height">
-          <div class="container videos">
-              <!-- <h2 class="text-center mb-4">Videos</h2> -->
-              <div class="row">
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/CTJ9izazmcI" title="Basket Case por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Basket Case</h3>
-                          <p>Green Day</p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/dMj01L3lTLE" title="Somebody To Love por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Somebody to love</h3>
-                          <p>Queen</p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/sCt8PWnE5aA" title="Uptown Funk por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Uptown funk</h3>
-                          <p>Mark Ronson</p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/JQb7Ov2_R-8" title="Fat Bottomed Girls por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Fat bottomed girls</h3>
-                          <p>Queen</p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/Nb4duVTIJ_Q" title="Beat it por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Beat it</h3>
-                          <p>Michael Jackson</p>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-                      <div class="caja">
-                          <iframe width="100%" height="185" src="https://www.youtube.com/embed/FCCBlRzMgFg" title="Don´t Stop Me Now por Coro Rock" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                          <h3>Don't stop me now</h3>
-                          <p>Queen</p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section> 
-                
-    </main>
-    <footer class="bg-dark text-white text-center">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-around align-items-center">
-            <a
-              
-              class="navbar-brand"
-              href="#"
-              rel="noopener noreferrer"
-            >
-              <i id="contact" class= "bi bi-envelope-at-fill footer-icons" onclick="showModal('contactModal')"></i>
-            </a>
-            <a class="navbar-brand" href="#" rel="noopener noreferrer">
-              <i id="official_video" class="bi bi-youtube footer-icons "></i>
-            </a>
-
-            <a
-              class="navbar-brand"
-              href="https://www.instagram.com/cororockoficial/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bi bi-instagram footer-icons"></i>
-            </a>
-            <button id="auditions-btn" class="btn btn-dark" type="button" onclick="showModal('auditionModal')">Audiciones</button>
-            <!-- Vertically centered scrollable modal -->
-
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  
-      <!-- Modal para mostrar el reproductor de YouTube -->
-  <div class="modal fade" id="youtubeModal" tabindex="-1" aria-hidden="true">
-   
-      <div class="modal-dialog modal-dialog-centered modal-lg"> 
-     
-        <button type="button" class="btn-close close-circle" data-bs-dismiss="modal" aria-label="Cerrar"></button> 
-          <div class="modal-content">
-            
-          <div class="modal-body text-center"> 
-            <div id="youtube-video" ></div> <!-- Reproductor de YouTube -->
-          </div>
-         
-        </div>
-      </div>
-    </div>
-
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./scripts.js"></script>
-  </body>
-</html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coro Rock</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-texto">
+        <h2>NOSOTROS</h2>
+        <br>
+        <p>El Coro Rock empezó en 2016 dentro de Punto Coral, donde ya había un coro mixto y un coro femenino. 
+            Fue creado por Alejandro Merayo que unos años más tarde le dejó el liderazgo del Coro Rock a su hermano Martín 
+            Merayo</p>
+        <br>
+        <p>En sus comienzos contaba con un repertorio variado con temas como: 
+            Human de The Killers, 
+            Un Divas mashup con temas de Madonna y Britney Spears, 
+            Chandelier de Sia, 
+            Rolling in the deep de Adele, 
+            Un Soda Estereo mashup. 
+            </p>
+            <br>
+            <p>Luego se fue focalizando en un repertorio más centrado en la banda QUEEN con temas como:
+                Somebody to love, 
+                I want it all, 
+                Under pressure, 
+                Fat Bottomed Girls, 
+                Don´t stop me now, 
+                Bohemian Rhapsody. 
+                Esto nos llevo a eventos como el estreno de la película Bohemian Rhapsody, la exposición fotográfica de 
+                Mick Rock en el centro cultural Borges entre otras presentaciones.
+                </p>
+                <br>
+                <p>El la actualidad hemos realizado presentaciones tanto públicas como privadas lo que nos animo a 
+                    incorporar nuevos temas como:
+                    Uptown Funk de Bruno Mars,
+                    Beat It de Michael Jackson,
+                    Basket Case de Green Day,
+                    Rock mashup con todos temas que tienen la palabra rock,
+                    Living on a prayer de Bon Jovi,
+                    AC/DC mashup.
+                    <br>
+                    Un coro con un espiríritu joven aunque todos sabemos que el Rock alcanzo su perfección en el 74 
+                    según H.J.S. Hacemos lo posible para Rockearla por siempre.
+                    Mientras nos sigan acompañando estaremos.
+                    </p>
+    </div></div>
+</body>
