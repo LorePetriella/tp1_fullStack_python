@@ -25,8 +25,7 @@ html, body {
 }
 
 .full-height {
-    flex-grow: 1;  /* Hace que las secciones ocupen el espacio disponible */
-   
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,14 +42,14 @@ html, body {
 
 .carousel-inner img {
     height: 500px;
-    object-fit: cover; /* Para que las imágenes se adapten a la altura */
-    border-radius: 20px; /* Aplicar bordes redondeados a las imágenes también */
+    object-fit: cover; 
+    border-radius: 20px; 
 }
 
 footer {
-    margin-top: auto; /* Empuja el footer al final del contenido */
+    margin-top: auto; 
     width: 100%;
-    background-color: #f8f9fa;
+ 
 }
 
 .footer-icons {
@@ -58,17 +57,17 @@ footer {
 }
 
 .close-circle {
-    position: absolute; /* Permitir posicionamiento */
-    top: 5px; /* Ajustar la posición vertical */
-    right: -40px; /* Ajustar la posición horizontal */
-    border-radius: 50%; /* Convertir en círculo */
-    width: 30px; /* Ancho del círculo */
-    height: 30px; /* Alto del círculo */
-    display: flex; /* Para centrar el contenido */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
+    position: absolute; 
+    top: 5px; 
+    right: -40px;
+    border-radius: 50%; 
+    width: 30px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     z-index: 10;
-    --bs-btn-close-color: black; /* Color de la cruz */
+    --bs-btn-close-color: black; 
     border: 2px solid black;
 }
 
@@ -90,7 +89,7 @@ footer {
 
 .agenda .caja, .videos .caja {
     background-color: white;
-    width: calc(100% - 40px); /* Para dispositivos móviles */   
+    width: calc(100% - 40px); /* Para dispositivos móviles */
     height: 400px; /* Ajustar la altura según sea necesario */
     margin: 20px;
     border-radius: 8px;
@@ -98,6 +97,9 @@ footer {
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: space-between; /* Espacio entre los elementos */
 }
 .agenda .caja {
     max-width: 330px;
@@ -116,18 +118,28 @@ footer {
 .agenda .caja img, .videos .caja iframe {
     width: 100%;
     height: auto;
+    max-height: 70%; /* La imagen ocupa un máximo del 70% de la altura de la tarjeta */
 }
 
 .agenda .caja h3, .videos .caja h3 {
     font-weight: 600;
+    margin: 0;
+    padding: 10px 0; /* Añadir padding para espacio */
 }
 
 .agenda .caja p, .videos .caja p {
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
+    margin: 0;
+    padding-bottom: 1rem;
 }
 
+/* Asegura que los elementos de texto estén siempre visibles y no se superpongan con la imagen */
+.agenda .caja > div {
+    padding: 1rem;
+    background: white;
+}
 
 /* @media (min-width: 576px) {
     .agenda .caja, .videos .caja {
@@ -146,5 +158,10 @@ footer {
         width: calc(25% - 40px); 
     }
 } */
+
+
+
+
+
 
 
