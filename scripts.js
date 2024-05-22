@@ -71,12 +71,12 @@ const showModal = (modalId) => {
                         </div>
                         <div class="modal-body">
                         <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label visually-hidden">Email address</label>
+                        <label for="exampleFormControlInput1" class="form-label visually-hidden" required>Email address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                       </div>
                       <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label visually-hidden">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
                       </div>
 
                         </div>
@@ -104,21 +104,21 @@ const showModal = (modalId) => {
                       <div class="col-md-6">
                       
                         <label class="visually-hidden" for="inputFirstName" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre">
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="Nombre" required>
                       </div>
                       <div class="col-md-6">
                       <label class="visually-hidden" for="inputLastName" class="form-label">Apellido</label>
-                      <input type="text" class="form-control" id="inputLastName" placeholder="Apellido">
+                      <input type="text" class="form-control" id="inputLastName" placeholder="Apellido" required>
                       </div>
                       <div class="col-md-6">
                       <label class="visually-hidden" for="inputEmail4" class="form-label">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
                       </div>
                       
                      
                       <div class="col-md-6">
                         <label class="visually-hidden" for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" required>
                           <option selected>Cuerda</option>                         
                           <option value="Soprano">Soprano</option>
                           <option value="Alto">Alto</option>
