@@ -10,7 +10,7 @@ const showSection = (sectionId) => {
 
 
 // $("navbar-balance").addEventListener("click", () =>
-//   mostrarVista("seccion-balance")
+//   showSection("seccion-balance")
 // );
 
 //Modal para videos de youTube que se muestra con el ícono del footer
