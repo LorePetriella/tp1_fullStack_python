@@ -144,8 +144,8 @@ footer {
     background: white;
 }
 #agenda {
-    width: 100vw; /* Asegura que la sección ocupe todo el ancho de la pantalla */
-    height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+    /* width: 100vw; 
+    height: 100vh;  */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,8 +167,7 @@ footer {
 }
 
 #videos {
-    width: 100vw; /* Asegura que la sección ocupe todo el ancho de la pantalla */
-    height: 100vh; /* Asegura que la sección ocupe toda la altura de la pantalla */
+   
     display: flex;
     align-items: center;
     justify-content: center;
