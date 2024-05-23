@@ -1,7 +1,17 @@
 const $ = (id) => document.getElementById(id);
 const $$ = (selector) => document.querySelectorAll(selector);
 
+const showSection = (sectionId) => {
+  $$(".show-section").forEach((section) => {
+      section.classList.add("visually-hidden");
+      $(`${sectionId}`).classList.remove("visually-hidden");
+  });
+};
 
+
+// $("navbar-balance").addEventListener("click", () =>
+//   mostrarVista("seccion-balance")
+// );
 
 //Modal para videos de youTube que se muestra con el ícono del footer
 $("official_video").addEventListener("click", (event) => {

@@ -169,7 +169,7 @@ footer {
   }
   
   
-  #about-us p {
+#about-us p {
     font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -177,7 +177,7 @@ footer {
   }
   
   
-  .wrap {
+.wrap {
       position: relative;
       width: 100vw;
       height: 90vh;
