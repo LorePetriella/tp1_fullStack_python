@@ -13,6 +13,7 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #302626; /* Fondo gris para toda la página */
 }
 header{
     font-family:'Roboto Condensed', sans-serif;
@@ -76,7 +77,7 @@ footer {
 .agenda, .videos {
     width: 100%;
     max-width: 1200px;
-    height: 100%;
+    /*height: 100%;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -141,6 +142,51 @@ footer {
 .agenda .caja > div {
     padding: 1rem;
     background: white;
+}
+#agenda {
+    /* width: 100vw; 
+    height: 100vh;  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/LucesFondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.agenda {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#videos {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./assets/ConcertFondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.videos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+
 }
 
 /* @media (min-width: 576px) {
@@ -231,6 +277,25 @@ footer {
       width: 90%;
     }
   }
+/* Media queries para hacer las tarjetas más responsivas
+@media (min-width: 576px) {
+    .agenda .caja, .videos .caja {
+        width: calc(50% - 40px); 
+    }
+}
+
+@media (min-width: 768px) {
+    .agenda .caja, .videos .caja {
+        width: calc(33.333% - 40px); 
+    }
+}
+
+@media (min-width: 992px) {
+    .agenda .caja, .videos .caja {
+        width: calc(25% - 40px); 
+    }
+}
+ Tampoco esta andando agregando esto*/ 
 
 
 
