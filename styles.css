@@ -226,7 +226,8 @@ footer {
   .wrap {
       position: relative;
       width: 100vw;
-      height: 90vh;
+      height: auto; /* Ajustar la altura automáticamente */
+      min-height: 90vh; /* Asegurar una altura mínima */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -234,6 +235,7 @@ footer {
       background-size: cover; /* Hacer que el fondo sea responsive */
       background-position: center;
       overflow: hidden; /* Evitar que el contenido se salga del contenedor */
+      padding: 20px; /* Añadir padding para espaciar el contenido */
   }
   
   
@@ -247,6 +249,7 @@ footer {
     padding: 20px; /* Añadido padding para separar el texto del borde del contenedor */
     background-color: rgba(119, 34, 34, 0.75);
     margin-top: auto; /* Colocar el texto en la parte inferior del contenedor */
+    overflow-y: auto; /* Asegurar que el contenido se pueda desplazar si es necesario */  
   }
   
   /* Media queries para diferentes resoluciones */
