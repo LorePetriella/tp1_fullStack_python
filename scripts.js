@@ -1,3 +1,4 @@
+//Get elements
 const $ = (id) => document.getElementById(id);
 const $$ = (selector) => document.querySelectorAll(selector);
 
@@ -56,9 +57,28 @@ const onPlayerStateChange = (event) => {
     }
   }
 };
+//Cambia de color los elementos del nav
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      // Remover la clase 'active' de todos los enlaces
+      navLinks.forEach((link) => {link.classList.remove('active'),
+      link.style.color = ""  
+    
+    });
+
+      // Añadir la clase 'active' al enlace clickeado
+      event.target.classList.add('active');
+      event.target.style.color = 'red';
+    });
+  });
+});
 
 //Modales con formularios
 const showModal = (modalId) => {
+
   const modalInnerHtml = {
     contactModal: `
       <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
@@ -66,7 +86,7 @@ const showModal = (modalId) => {
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="infoModalLabel">Escribinos!</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" id="close-contact" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form action="" id="contact-form" class="needs-validation" novalidate>
@@ -93,7 +113,7 @@ const showModal = (modalId) => {
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" id="close-audition" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="container mt-5">
@@ -180,6 +200,9 @@ const showModal = (modalId) => {
           </div>
         </div>
       </div>`,
+
+  
+
   };
 
   // Inserta el HTML del modal en el body
