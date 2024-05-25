@@ -154,9 +154,8 @@ footer.custom-shadow {
     padding: 1rem;
     background: white;
 }
-#agenda {
-    /* width: 100vw; 
-    height: 100vh;  */
+#concert-calendar {
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,7 +176,7 @@ footer.custom-shadow {
     padding: 20px;
 }
 
-#videos {
+#videos-section {
    
     display: flex;
     align-items: center;
