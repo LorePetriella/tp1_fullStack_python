@@ -154,7 +154,7 @@ footer.custom-shadow {
     padding: 1rem;
     background: white;
 }
-#agenda {
+#concert-calendar {
     /* width: 100vw; 
     height: 100vh;  */
     display: flex;
@@ -166,7 +166,7 @@ footer.custom-shadow {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.agenda {
+.concert-calendar {
     position: relative;
     width: 100%;
     height: 100%;
@@ -177,7 +177,7 @@ footer.custom-shadow {
     padding: 20px;
 }
 
-#videos {
+#videos-section {
    
     display: flex;
     align-items: center;
@@ -188,7 +188,7 @@ footer.custom-shadow {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.videos {
+.videos-section {
     position: relative;
     width: 100%;
     height: 100%;
